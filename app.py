@@ -196,21 +196,111 @@ def responder(mensaje, contexto):
 # ----------------------- ESTILOS -----------------------------
 st.markdown("""
 <style>
-:root { --lime: #e7ff36; --ink: #10141d; }
-.stApp { background: linear-gradient(180deg, #10141d 0%, #151c28 100%); color: #f6f7fb; }
-[data-testid="stHeader"] { background: rgba(16,20,29,0); }
-.block-container { max-width: 820px; padding-top: 2rem; padding-bottom: 3rem; }
-.brand-card { background: #202633; border: 1px solid #343d4d; border-radius: 22px; padding: 22px; margin-bottom: 18px; }
-.brand-kicker { color: var(--lime); font-size: 12px; letter-spacing: 2px; font-weight: 800; }
-.brand-title { color: white; font-size: 34px; font-weight: 900; line-height: 1.1; margin: 5px 0; }
-.brand-sub { color: #b6bfce; font-size: 14px; }
-div[data-testid="stChatMessage"] { background: #202633; border: 1px solid #343d4d; border-radius: 16px; padding: 8px 12px; }
-.stButton button { border-radius: 14px; border: 1px solid #596477; background: #202633; color: white; min-height: 44px; }
-.stButton button:hover { border-color: #e7ff36; color: #e7ff36; }
-div[data-testid="stChatInput"] textarea { background: #202633; color: white; }
-.small-note { color: #aab3c2; font-size: 12px; text-align: center; }
+.stApp {
+    background: linear-gradient(180deg, #eaf7ff 0%, #d7edff 100%);
+    color: #172b3a;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(234, 247, 255, 0.95);
+}
+
+.block-container {
+    max-width: 820px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.brand-card {
+    background: #ffffff;
+    border: 1px solid #b9dcf5;
+    border-radius: 22px;
+    padding: 22px;
+    margin-bottom: 18px;
+}
+
+.brand-kicker {
+    color: #1769aa;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.brand-title {
+    color: #123b59;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 5px 0;
+}
+
+.brand-sub {
+    color: #40596d;
+    font-size: 14px;
+}
+
+h1, h2, h3, p, label, .stMarkdown, .stCaption {
+    color: #172b3a;
+}
+
+div[data-testid="stChatMessage"] {
+    background: #ffffff;
+    border: 1px solid #c2dff3;
+    border-radius: 16px;
+    padding: 9px 13px;
+    color: #172b3a;
+}
+
+div[data-testid="stChatMessage"] p,
+div[data-testid="stChatMessage"] li {
+    color: #172b3a !important;
+}
+
+.stButton button {
+    border-radius: 14px;
+    border: 1px solid #8bbfe5;
+    background: #c5e6ff;
+    color: #123b59;
+    min-height: 44px;
+    font-weight: 600;
+}
+
+.stButton button:hover {
+    border-color: #1769aa;
+    background: #a9d8ff;
+    color: #123b59;
+}
+
+div[data-testid="stChatInput"] textarea {
+    background: #ffffff !important;
+    color: #172b3a !important;
+    border: 1px solid #8bbfe5 !important;
+}
+
+div[data-testid="stChatInput"] textarea::placeholder {
+    color: #536b7d !important;
+}
+
+div[data-testid="stExpander"] {
+    background: #ffffff;
+    border: 1px solid #b9dcf5;
+    border-radius: 12px;
+}
+
+div[data-testid="stExpander"] summary,
+div[data-testid="stExpander"] summary p {
+    color: #172b3a !important;
+}
+
+.small-note {
+    color: #40596d;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
 </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("""
 <div class="brand-card">
